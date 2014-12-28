@@ -1,0 +1,36 @@
+From 01be9b7ed8bef56a133488e410d08b4f1ea187a6 Mon Sep 17 00:00:00 2001
+From: Koen Kooi <koen@dominion.thruhere.net>
+Date: Sun, 28 Dec 2014 19:44:04 +0100
+Subject: [PATCH] configure.ac: remove AM_PO_SUBDIRS
+
+Together with oe autotools.bbclass this is done twice and causes:
+
+| configure.ac:67: error: `po-directories' is already registered with
+AC_CONFIG_COMMANDS.
+|
+/build/jenkins/angstrom-v2014.12/machine/beaglebone/build/tmp-angstrom_next-glibc/work/x86_64-linux/autoconf-native/2.69-r11/autoconf-2.69/lib/autoconf/status.m4:1009:
+AC_CONFIG_COMMANDS is expanded from...
+|
+/build/v2014.12/build/tmp-angstrom_v2014_12-glibc/work/armv7at2hf-vfp-neon-angstrom-linux-gnueabi/gphoto2/2.5.6-r0/build/aclocal-copy/po.m4:23:
+AM_PO_SUBDIRS is expanded from...
+
+Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
+---
+ configure.ac | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 19589f8..244c538 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -64,7 +64,6 @@ GP_GETTEXT_HACK([],[Lutz Müller and others],[${MAIL_GPHOTO_TRANSLATION}])
+ ALL_LINGUAS="az cs da de en_GB es eu fi fr hu id is it ja nl pa pl pt_BR ro ru rw sk sr sv uk vi zh_CN zh_TW"
+ AM_GNU_GETTEXT_VERSION([0.14.1])
+ AM_GNU_GETTEXT([external])
+-AM_PO_SUBDIRS()
+ AM_ICONV()
+ GP_GETTEXT_FLAGS()
+ 
+-- 
+1.9.0
+
