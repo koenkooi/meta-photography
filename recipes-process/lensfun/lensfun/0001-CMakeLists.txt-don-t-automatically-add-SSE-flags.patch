@@ -1,0 +1,41 @@
+From 29a788fe7d9cc959819eb2f2b388898eec63beac Mon Sep 17 00:00:00 2001
+From: Koen Kooi <koen@dominion.thruhere.net>
+Date: Mon, 29 Dec 2014 16:17:37 +0100
+Subject: [PATCH] CMakeLists.txt: don't automatically add SSE flags
+
+OE will add the proper ones on its own.
+
+Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
+
+Upstream-status: Inappropriate [Too much common sense for cmake]
+---
+ CMakeLists.txt | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8416fe6..354d20c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -44,19 +44,6 @@ IF(NOT CMAKE_BUILD_TYPE)
+   )
+ ENDIF()
+ 
+-IF(BUILD_FOR_SSE)
+-  SET(VECTORIZATION_SSE 1)
+-  IF(CMAKE_COMPILER_IS_GNUCXX)
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse")
+-  ENDIF()
+-ENDIF()
+-IF(BUILD_FOR_SSE2)
+-  SET(VECTORIZATION_SSE2 1)
+-  IF(CMAKE_COMPILER_IS_GNUCXX)
+-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse2")
+-  ENDIF()
+-ENDIF()
+-
+ IF(WIN32)
+   INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/libs/getopt)
+   # base path for searching for glib on windows
+-- 
+1.9.0
+
