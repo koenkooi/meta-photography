@@ -14,6 +14,7 @@ inherit autotools pkgconfig gettext
 
 CFLAGS += "-D_DEFAULT_SOURCE "
 
-
+export POPT_CFLAGS = "-I${STAGING_INCDIR}"
+export POPT_LIBS = "-lpopt"
 
 
