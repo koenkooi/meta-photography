@@ -30,7 +30,7 @@ PACKAGECONFIG[samba] = "--enable-samba --with-samba-includes=${STAGING_INCDIR} \
 # needs meta-filesystems
 PACKAGECONFIG[fuse] = "--enable-fuse, --disable-fuse, fuse"
 PACKAGECONFIG[archive] = "--enable-archive, --disable-archive, libarchive"
-PACKAGECONFIG[obexftp] = "--enable-obexftp, --disable-obexftp, bluez4 expat"
+PACKAGECONFIG[obexftp] = "--enable-obexftp, --disable-obexftp, bluez5 expat"
 PACKAGECONFIG[cdda] = "--enable-cdda, --disable-cdda, libcdio"
 PACKAGECONFIG[systemd] = "--enable-libsystemd-login, --disable-libsystemd-login, systemd"
 
