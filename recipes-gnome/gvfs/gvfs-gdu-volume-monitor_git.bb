@@ -2,7 +2,7 @@ require gvfs.inc
 
 BPN = "gvfs"
 
-DEPENDS = "gvfs gnome-disk-utility libgnome-keyring intltool-native"
+DEPENDS = "gtk+ gvfs gnome-disk-utility libgnome-keyring intltool-native"
 
 # we need gdu files only: reduce files to delete in libexecdir
 EXTRA_OECONF += "--disable-gphoto2 \
