@@ -1,7 +1,7 @@
 require gvfs.inc
 
-DEPENDS = "libsoup-2.4 gnome-keyring glib-2.0 avahi gconf libgphoto2 intltool-native"
-# optional: obexftp libcdio libimobiledevice 
+DEPENDS = "libsoup-2.4 libgnome-keyring glib-2.0 avahi gconf libgphoto2 intltool-native"
+# optional: obexftp libcdio libimobiledevice
 
 # in case of gnome-disk-utility was alresdy built: avoid double files
 # afc is enabled when it detects libimobiledevice
