@@ -1,4 +1,4 @@
-require recipes-gnome/gvfs/gvfs_1.32.1.bb
+require recipes-gnome/gvfs/gvfs_1.36.0.bb
 
 BPN = "gvfs"
 
