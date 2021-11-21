@@ -5,9 +5,9 @@ LICENSE = "GPLv1"
 LIC_FILES_CHKSUM = "file://perl-Image-ExifTool.spec;beginline=5;endline=5;md5=ffefffc98dab025cb49489bd4d88ee10"
 
 SRC_URI = "git://github.com/exiftool/exiftool.git;protocol=https"
-SRCREV = "66da18b6f5c4e40b1d37a1d6c16e95b25a5ab46e"
+SRCREV = "9ceb6432cb71f892bdd1073599f8dfb7f373537d"
 
-PV = "12.07"
+PV = "12.36"
 
 S = "${WORKDIR}/git"
 
